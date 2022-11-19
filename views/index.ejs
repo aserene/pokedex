@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head.ejs") %>
+<body>
+    <%- include("./partials/header.ejs") %>
+    <div class="container">
+        <div class="div-transform">
+            <% for(poke of pokemon) { %>
+                <div class="card">
+                    <h2><%=poke.name%></h2>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
