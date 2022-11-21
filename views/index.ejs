@@ -7,7 +7,8 @@
         <div class="div-transform">
             <% for(poke of pokemon) { %>
                 <div class="card">
-                    <h2><%=poke.name%></h2>
+                    <a href="/pokedex/<%=poke.name%>"><h2><%=poke.name%></h2></a>
+                </div>
                 </div>
             <% } %>
         </div>
