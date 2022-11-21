@@ -4,12 +4,13 @@ body {
     background-repeat: no-repeat;
     height: 100%;
     margin: 0;
+    color: rgb(232, 232, 232);
 }
 .pokedex {
     background-color: rgb(139, 188, 255);
     border-top-left-radius:  10px;
     border-bottom-right-radius: 10px;
-    color: rgb(232, 232, 232)
+    /* color: rgb(232, 232, 232) */
 }
 .contain {
     display: flex;
@@ -17,6 +18,7 @@ body {
 }
 .add {
     margin-top: 8px;
+    margin-right: 10px
 }
 .container {
     display: flex;
@@ -44,11 +46,12 @@ body {
     justify-content: right;
 }
 .show {
-    width: 300px;
-    height:300px
+    margin: 20px;
+    width: 300px
 }
 .show-container {
     display: flex;
+    justify-content: left;
 }
 .show img {
     border-top-left-radius: 10px;
@@ -56,5 +59,39 @@ body {
 }
 .entry {
     background-color: rgb(139, 188, 255);
-    color:(232, 232, 232)
+    color: rgb(232, 232, 232)
+}
+.container-2 {
+    display: flex;
+    justify-content: space-between;
+}
+.container-2 button {
+    margin-top: 8px
+}
+.delete {
+    margin-right: 10px
+}
+.stats {
+    margin-top: 20px;
+}
+.entry {
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.damage {
+    margin-top: 20px;
+    margin-left: 50px
+}
+span {
+    text-decoration: underline;
+    justify-items: center;
+}
+.sub-dmg {
+    display: flex;
+}
+.sub-dmg div {
+    margin-left: 20px;
+}
+.damage h3 {
+    margin-left: 70px;
 }

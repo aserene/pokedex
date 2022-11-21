@@ -2,20 +2,62 @@
 <html lang="en">
     <%- include("./partials/head.ejs") %>
 <body>
-    <h1 class="entry">Pokemon Entry - <%=poke.name%></h1>
-    <a href="/pokedex"><button>Back to Pokedex</button></a>
+    <header class="entry">
+        <div class="container-2">
+            <h1>Pokemon Entry - <%=poke.name%></h1>
+            <a href="/pokedex"><button>Back to Pokedex</button></a>
+            <a href="/pokedex/:id/edit"><button>Edit</button></a>
+            <button class="delete">Delete</button>
+        </div>
+    </header>
     <div class="show-container">
         <div class="show">
-        <img src="<%=poke.img%>" alt="<%=poke.name%>">
-        <h5>Classification</h5>
-        <h5>Type:</h5>
+            <img src="<%=poke.img%>" alt="<%=poke.name%>">
+            <h3>Classification: <%=poke.misc.classification%></h3>
+            <h5>Type:
             <% for (let i = 0; i < poke.type.length; i++) { %>
-            <li><%= poke.type[i] %></li>
+                <%= poke.type[i] %>
             <% } %>
+            </h5>
+            <h5>Height: <%=poke.misc.height%> | Weight: <%=poke.misc.weight%></h5>
+            <h5>Abilities:</h5>
+            <h6>Normal: <%=poke.misc.abilities.normal[0]%></h6>
+            <h6>Hidden: <%=poke.misc.abilities.hidden[0]%></h6>
+        </div>
+        <div class="stats">
+            <h3><span>Stats</span></h3>
+            <h4>HP: <%=poke.stats.hp%></h4>
+            <h4>Attack: <%=poke.stats.attack%></h4>
+            <h4>Defense: <%=poke.stats.defense%></h4>
+            <h4>Special Attack: <%=poke.stats.spattack%></h4>
+            <h4>Special Defense: <%=poke.stats.spdefense%></h4>
+            <h4>Speed: <%=poke.stats.speed%></h4>
+        </div>
+        <div class="damage">
+            <h3><span>Damage</span></h3>
+            <div class="sub-dmg">
+            <div>
+                <h4>Normal: <%=poke.damages.normal%></h4>
+                <h4>Fire: <%=poke.damages.fire%></h4>
+                <h4>Water: <%=poke.damages.water%></h4>
+                <h4>Grass: <%=poke.damages.grass%></h4>
+                <h4>Electric: <%=poke.damages.electric%></h4>
+                <h4>Ice: <%=poke.damages.ice%></h4>
+                <h4>Fighting: <%=poke.damages.fight%></h4>
+                <h4>Poison: <%=poke.damages.poison%></h4>
+            </div>
+            <div>
+                <h4>Ground: <%=poke.damages.ground%></h4>
+                <h4>Steel: <%=poke.damages.steel%></h4>
+                <h4>Bug: <%=poke.damages.bug%></h4>
+                <h4>Flying: <%=poke.damages.flying%></h4>
+                <h4>Psychic: <%=poke.damages.psychic%></h4>
+                <h4>Dark: <%=poke.damages.dark%></h4>
+                <h4>Ghost: <%=poke.damages.ghost%></h4>
+                <h4>Dragon: <%=poke.damages.dragon%></h4>
+            </div>
+            </div>
         </div>
     </div>
-    <div class="stats"></div>
-    <div class="moves"></div>
-    <div class="damages"></div>
 </body>
 </html>
