@@ -2,7 +2,13 @@
 <html lang="en">
     <%- include("./partials/head.ejs") %>
 <body>
-    <%- include("./partials/header.ejs") %>
-    
+    <header>Pokemon Entry - <%=poke.name%></header>
+    <div>
+        <img src="<%=poke.img%>" alt="<%=poke.name%>">
+    </div>
+    <h5>Type:</h5>
+            <% for (let i = 0; i < poke.type.length; i++) { %>
+            <li><%= poke.type[i] %></li>
+            <% } %>
 </body>
 </html>
