@@ -4,15 +4,12 @@
 <body>
     <%- include("./partials/header.ejs") %>
     <div class="container">
-        <div class="div-transform">
             <% for(let i = 0; i < pokemon.length; i++) { %>
                 <div class="card">
-                    <a href="/pokedex/<%=i%>"><h2><%=pokemon[i].name%></h2></a>
+                    <header><a href="/pokedex/<%=i%>"><h2><%=pokemon[i].name%></h2></a></header>
                     <img src="<%=pokemon[i].img%>" alt="<%=pokemon[i].name%>">
                 </div>
-                </div>
             <% } %>
-        </div>
     </div>
 </body>
 </html>

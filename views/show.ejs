@@ -2,13 +2,20 @@
 <html lang="en">
     <%- include("./partials/head.ejs") %>
 <body>
-    <header>Pokemon Entry - <%=poke.name%></header>
-    <div>
+    <h1 class="entry">Pokemon Entry - <%=poke.name%></h1>
+    <a href="/pokedex"><button>Back to Pokedex</button></a>
+    <div class="show-container">
+        <div class="show">
         <img src="<%=poke.img%>" alt="<%=poke.name%>">
-    </div>
-    <h5>Type:</h5>
+        <h5>Classification</h5>
+        <h5>Type:</h5>
             <% for (let i = 0; i < poke.type.length; i++) { %>
             <li><%= poke.type[i] %></li>
             <% } %>
+        </div>
+    </div>
+    <div class="stats"></div>
+    <div class="moves"></div>
+    <div class="damages"></div>
 </body>
 </html>
