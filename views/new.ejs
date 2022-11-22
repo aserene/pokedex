@@ -2,6 +2,18 @@
 <html lang="en">
     <%- include("./partials/head.ejs") %>
 <body>
-    
+    <header>
+        <h1>Pokedex - Add a Pokemon</h1>
+    </header>
+    <div class="form">
+    <form action="/pokedex" method="POST">
+        Name: <input type="text" name="name" value="<%pokemon.name%>"> 
+        Id: <input type="text" name="name" value="<%pokemon.id%>">
+        Type: <input type="text" name="type" value="<%pokemon.type%>">
+        Classification: <input type="text" name="classification" value="<%pokemon.misc.classification%>">
+        Image: <input type="text" name="img" value="<%pokemon.img%>">
+        <input type="submit" value="Add Pokemon">
+    </form>
+    </div>
 </body>
 </html>

@@ -14,24 +14,28 @@ app.get("/", (req, res) => res.redirect("/pokedex"))
 app.get("/pokedex", (req, res) => {
     res.render("index.ejs", {pokemon})
 })
-// app.get("/pokedex/new", (req, res)=> {
-//     // res.send("what'cha tryna make?")
-//     res.render("new.ejs", {pokemon})
-// })
-// app.post("/pokedex", (req, res)=> {
-//     pokemon.push(req.body)
-//     res.redirect("/pokedex")
-// })
+app.get("/pokedex/new", (req, res)=> {
+    // res.send("what'cha tryna make?")
+    res.render("new.ejs", {pokemon})
+})
+app.post("/pokedex", (req, res)=> {
+    pokemon.push(req.body)
+    res.redirect("/pokedex")
+})
+app.get("/pokedex/:id/edit", (req, res) => {
+    // res.send("hello")
+    res.render("edit.ejs", {
+        poke: pokemon[req.params.id],
+        index: [req.params.id]
+    })
+})
 app.get("/pokedex/:id", (req, res)=> {
     // res.send("you're in the right place...")
     res.render("show.ejs", {
         poke: pokemon[req.params.id],
-        pokemons: pokemon
+        index: [req.params.id]
     })
 })
-// app.get("/pokedex/:id/edit", (req, res) => {
-//     res.render("edit.ejs")
-// })
 // app.put("/pokedex/:id", (req, res) => {
 //     console.log("this is working")
 // })
