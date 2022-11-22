@@ -14,18 +14,19 @@ app.get("/", (req, res) => res.redirect("/pokedex"))
 // index route (DONE & WORKING)
 app.get("/pokedex", (req, res) => {
     res.render("index.ejs", {pokemon})
+    console.log(pokemon[1])
 })
 // new route pt. 1
 app.get("/pokedex/new", (req, res)=> {
     // res.send("what'cha tryna make?")
-    res.render("new.ejs", {pokemon})
+    res.render("new.ejs")
 })
 // new route pt. 2
 app.post("/pokedex", (req, res)=> {
     pokemon.push(req.body)
     res.redirect("/pokedex")
 })
-// edit (form) route pt. 1
+// edit (form) route pt. 1 (DONE & WORKING)
 app.get("/pokedex/:id/edit", (req, res) => {
     // res.send("hello")
     res.render("edit.ejs", {
@@ -33,7 +34,7 @@ app.get("/pokedex/:id/edit", (req, res) => {
         index: [req.params.id]
     })
 })
-// edit (put) route pt. 2
+// edit (put) route pt. 2 (DONE & WORKING)
 app.put("/pokedex/:id", (req, res) => {
     pokemon[req.params.id] = req.body
     // redirect user back to index

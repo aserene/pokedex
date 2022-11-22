@@ -10,11 +10,48 @@
     </header>
     <div class="edit">
         <form action="/pokedex/<%=index%>?_method=PUT" method="POST">
+            Id: <input type="text" name="id" value="<%=poke.id%>">
             Name: <input type="text" name="name" value="<%=poke.name%>">
-            Type: <input type="text" name="type" value="<%=poke.type%>">
-            Classification: <input type="text" name="classification" value="<%=poke.misc.classification%>">
-            Normal Ability: <input type="text" name="normal" value="<%=poke.misc.abilities.normal[0]%>">
-            Hidden Ability: <input type="text" name="hidden" value="<%=poke.misc.abilities.hidden[0]%>">
+            Img: <input type="text" name="img" value="<%=poke.img%>">
+            Type: <input type="text" name="type[]" value="<%=poke.type%>">
+            HP: <input type="text" name="stats[hp]" value="<%=poke.stats.hp%>">
+            Attack: <input type="text" name="stats[attack]" value="<%=poke.stats.attack%>">
+            Defense: <input type="text" name="stats[defense]" value="<%=poke.stats.defense%>">
+            Special Attack: <input type="text" name="stats[spattack]" value="<%=poke.stats.spattack%>">
+            Special Defense: <input type="text" name="stats[spdefense]" value="<%=poke.stats.spdefense%>">
+            Speed: <input type="text" name="stats[speed]" value="<%=poke.stats.speed%>">
+            Moves: <input type="text" name="moves[tmhm]" value="<%=poke.moves.tmhm[0].name%>">
+            Normal Damage: <input type="text" name="damages[normal]" value="<%=poke.damages.normal%>">
+            Fire Damage: <input type="text" name="damages[fire]" value="<%=poke.damages.fire%>">
+            Water Damage: <input type="text" name="damages[water]" value="<%=poke.damages.water%>">
+            Electric Damage: <input type="text" name="damages[electric]" value="<%=poke.damages.electric%>">
+            Grass Damage: <input type="text" name="damages[grass]" value="<%=poke.damages.grass%>">
+            Ice Damage: <input type="text" name="damages[ice]" value="<%=poke.damages.ice%>">
+            Fighting Damage: <input type="text" name="damages[fight]" value="<%=poke.damages.fight%>">
+            Poison Damage: <input type="text" name="damages[poison]" value="<%=poke.damages.poison%>">
+            Ground Damage: <input type="text" name="damages[ground]" value="<%=poke.damages.ground%>">
+            Flying Damage: <input type="text" name="damages[flying]" value="<%=poke.damages.flying%>">
+            Psychic Damage: <input type="text" name="damages[psychic]" value="<%=poke.damages.psychic%>">
+            Bug Damage: <input type="text" name="damages[bug]" value="<%=poke.damages.bug%>">
+            Rock Damage: <input type="text" name="damages[rock]" value="<%=poke.damages.rock%>">
+            Ghost Damage: <input type="text" name="damages[ghost]" value="<%=poke.damages.ghost%>">
+            Dragon Damage: <input type="text" name="damages[dragon]" value="<%=poke.damages.dragon%>">
+            Dark Damage: <input type="text" name="damages[dark]" value="<%=poke.damages.dark%>">
+            Steel Damage: <input type="text" name="damages[steel]" value="<%=poke.damages.steel%>">
+            Male: <input type="text" name="misc[sex]" value="<%=poke.misc.sex.male%>">
+            Female: <input type="text" name="misc[sex]" value="<%=poke.misc.sex.female%>">
+            Normal Ability: <input type="text" name="misc[abilities]" value="<%=poke.misc.abilities.normal%>">
+            Hidden Ability: <input type="text" name="misc[abilities]" value="<%=poke.misc.abilities.hidden%>">
+            Classification: <input type="text" name="misc[classification]" value="<%=poke.misc.classification%>">
+            Height: <input type="text" name="misc[height]" value="<%=poke.misc.height%>">
+            Weight: <input type="text" name="misc[weight]" value="<%=poke.misc.weight%>">
+            Capture Rate: <input type="text" name="misc[capturerate]" value="<%=poke.misc.capturerate%>">
+            Egg Steps: <input type="text" name="misc[eggsteps]" value="<%=poke.misc.eggsteps%>">
+            EXP Growth: <input type="text" name="misc[expgrowth]" value="<%=poke.misc.expgrowth%>">
+            Happiness Level: <input type="text" name="misc[happiness]" value="<%=poke.misc.happiness%>">
+            Evolution Points: <input type="text" name="misc[evpoints]" value="<%=poke.misc.evpoints[0]%>">
+            Flee Flag: <input type="text" name="misc[fleeflag]" value="<%=poke.misc.fleeflag%>">
+            Entry Forest Level: <input type="text" name="misc[entreeforestlevel]" value="<%=poke.misc.entreeforestlevel%>">
             <input type="submit" value="Update <%=poke.name%>">
         </form>
     </div>
