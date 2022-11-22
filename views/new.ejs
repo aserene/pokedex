@@ -7,11 +7,48 @@
     </header>
     <div class="form">
     <form action="/pokedex" method="POST">
-        Name: <input type="text" name="name" value="<%pokemon.name%>"> 
-        Id: <input type="text" name="name" value="<%pokemon.id%>">
-        Type: <input type="text" name="type" value="<%pokemon.type%>">
-        Classification: <input type="text" name="classification" value="<%pokemon.misc.classification%>">
-        Image: <input type="text" name="img" value="<%pokemon.img%>">
+        Id: <input type="text" name="id" value="<%pokemon.id%>">
+            Name: <input type="text" name="name" value="<%pokemon.name%>">
+            Img: <input type="text" name="img" value="<%pokemon.img%>">
+            Type: <input type="text" name="type[]" value="<%pokemon.type%>">
+            HP: <input type="text" name="stats[hp]" >
+            Attack: <input type="text" name="stats[attack]">
+            Defense: <input type="text" name="stats[defense]">
+            Special Attack: <input type="text" name="stats[spattack]">
+            Special Defense: <input type="text" name="stats[spdefense]">
+            Speed: <input type="text" name="stats[speed]">
+            Moves: <input type="text" name="moves[tmhm]">
+            Normal Damage: <input type="text" name="damages[normal]">
+            Fire Damage: <input type="text" name="damages[fire]">
+            Water Damage: <input type="text" name="damages[water]">
+            Electric Damage: <input type="text" name="damages[electric]">
+            Grass Damage: <input type="text" name="damages[grass]">
+            Ice Damage: <input type="text" name="damages[ice]">
+            Fighting Damage: <input type="text" name="damages[fight]">
+            Poison Damage: <input type="text" name="damages[poison]">
+            Ground Damage: <input type="text" name="damages[ground]">
+            Flying Damage: <input type="text" name="damages[flying]">
+            Psychic Damage: <input type="text" name="damages[psychic]">
+            Bug Damage: <input type="text" name="damages[bug]">
+            Rock Damage: <input type="text" name="damages[rock]">
+            Ghost Damage: <input type="text" name="damages[ghost]">
+            Dragon Damage: <input type="text" name="damages[dragon]">
+            Dark Damage: <input type="text" name="damages[dark]">
+            Steel Damage: <input type="text" name="damages[steel]">
+            Male: <input type="text" name="misc[sex]">
+            Female: <input type="text" name="misc[sex]">
+            Normal Ability: <input type="text" name="misc[abilities]">
+            Hidden Ability: <input type="text" name="misc[abilities]">
+            Classification: <input type="text" name="misc[classification]">
+            Height: <input type="text" name="misc[height]">
+            Weight: <input type="text" name="misc[weight]">
+            Capture Rate: <input type="text" name="misc[capturerate]">
+            Egg Steps: <input type="text" name="misc[eggsteps]">
+            EXP Growth: <input type="text" name="misc[expgrowth]">
+            Happiness Level: <input type="text" name="misc[happiness]">
+            Evolution Points: <input type="text" name="misc[evpoints]">
+            Flee Flag: <input type="text" name="misc[fleeflag]">
+            Entry Forest Level: <input type="text" name="misc[entreeforestlevel]">
         <input type="submit" value="Add Pokemon">
     </form>
     </div>

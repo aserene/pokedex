@@ -16,12 +16,12 @@ app.get("/pokedex", (req, res) => {
     res.render("index.ejs", {pokemon})
     console.log(pokemon[1])
 })
-// new route pt. 1
+// new route pt. 1 (DONE & WORKING)
 app.get("/pokedex/new", (req, res)=> {
     // res.send("what'cha tryna make?")
-    res.render("new.ejs")
+    res.render("new.ejs", {pokemon})
 })
-// new route pt. 2
+// new route pt. 2 (DONE & WORKING)
 app.post("/pokedex", (req, res)=> {
     pokemon.push(req.body)
     res.redirect("/pokedex")
