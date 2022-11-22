@@ -3,7 +3,20 @@
     <%- include("./partials/head.ejs") %>
 <body>
     <header>
-        <h1>Edit Pokemon - <%=poke.name%></h1>
+        <div class="container-3">
+            <h1>Edit Pokemon - <%=poke.name%></h1>
+            <a href="/pokedex/<%=index%>"><button>Back to Pokedex Entry</button></a>
+        </div>
     </header>
+    <div class="edit">
+        <form action="/pokedex/<%=index%>?_method=PUT" method="POST">
+            Name: <input type="text" name="name" value="<%=poke.name%>">
+            Type: <input type="text" name="type" value="<%=poke.type%>">
+            Classification: <input type="text" name="classification" value="<%=poke.misc.classification%>">
+            Normal Ability: <input type="text" name="normal" value="<%=poke.misc.abilities.normal[0]%>">
+            Hidden Ability: <input type="text" name="hidden" value="<%=poke.misc.abilities.hidden[0]%>">
+            <input type="submit" value="Update <%=poke.name%>">
+        </form>
+    </div>
 </body>
 </html>

@@ -73,8 +73,9 @@ header {
 .container-2 button {
     margin-top: 8px
 }
-.delete {
-    margin-right: 10px
+.container-2 form {
+    margin-right: 10px;
+    margin-top: 8px
 }
 .stats {
     margin-top: 20px;
@@ -99,4 +100,12 @@ span {
 }
 .damage h3 {
     margin-left: 70px;
+}
+.container-3{
+    display: flex;
+    justify-content: space-between;
+}
+.container-3 button {
+    margin-right: 20px;
+    margin-top: 8px
 }

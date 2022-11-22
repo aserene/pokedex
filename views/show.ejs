@@ -7,7 +7,9 @@
             <h1>Pokemon Entry - <%=poke.name%></h1>
             <a href="/pokedex"><button>Back to Pokedex</button></a>
             <a href="/pokedex/<%=index%>/edit"><button>Edit</button></a>
-            <button class="delete">Delete</button>
+            <form action="/pokedex/<%=index%>?_method=DELETE" method="POST">
+                <input type="submit" value="Delete">
+            </form>
         </div>
     </header>
     <div class="show-container">
